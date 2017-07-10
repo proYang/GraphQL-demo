@@ -3,7 +3,6 @@ const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 const ENV = process.env.NODE_ENV
-
 let config = {
   entry: './app/main.js',
   output: {
@@ -60,6 +59,7 @@ let config = {
   ]
 }
 
+console.log(`<--------- ${ ENV } ----------->`)
 if (ENV == 'production') {
   config.devtool = 'hidden-source-map'
   config.plugins.push(new webpack.optimize.UglifyJsPlugin({
@@ -67,8 +67,7 @@ if (ENV == 'production') {
       warnings: false
     }
   }))
-}
-else if (ENV == 'development') {
+} else if (ENV == 'development') {
   config.devtool = 'cheap-module-source-map'
 }
 
