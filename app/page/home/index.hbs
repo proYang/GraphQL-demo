@@ -1,0 +1,15 @@
+<div class="home-container">
+  <h1 class="news">Hacker News {{username}} </h1>
+  <ul class="list">
+    {{#each list}}
+    <li class="item">
+      <span> {{[helpers/getIndex]}} .</span>
+      <h2> 
+        {{title}} 
+        (<span> {{source}} </span>)
+      </h2>
+      <p>Write by {{author.name}} </p>
+    </li>
+    {{/each}}
+  </ul>
+</div>
