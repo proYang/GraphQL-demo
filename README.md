@@ -18,9 +18,9 @@ npm run build
 
 ```
 ## 目录说明
-- /app      前端源文件目录
-- /dist     前端构建输出目录
-- /server   Node服务器目录
+- /app      ---------前端源文件目录
+- /dist     ---------前端构建输出目录
+- /server   ---------Node服务器目录
 
 ## GraphQL和其他API查询设计的优劣
 ### 优势
