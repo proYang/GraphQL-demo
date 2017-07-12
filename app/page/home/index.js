@@ -50,14 +50,27 @@ class Main {
   }
 
   fetchAuthorListAsync() {
-    return Axios.post("/graphql",`
-      query 
-      authorList { 
+    return Axios.post("/graphql", `
+      query authorList { 
         authorList { 
           id 
           name
         } 
       }`)
+  }
+
+  fetchAllIndexListAsync() {
+    return Axios.post("/graphql", `
+    query articleList	{ 
+      articleList	{ 
+        id 
+        title
+      } 			
+      authorList	{ 
+        id 
+        name 
+      }		
+    }`)
   }
 }
 
