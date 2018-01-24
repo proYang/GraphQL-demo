@@ -1,4 +1,4 @@
-# GraphQL-demon
+# GraphQL-demo
 A webserver demo for graphql.js    
 ## Build Setup
 
